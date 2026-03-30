@@ -239,6 +239,7 @@ body{opacity:0;animation:pageIn .4s ease forwards .05s}@keyframes pageIn{to{opac
 @media(max-width:480px){.container{padding:0 1rem}.page-hero-title{font-size:1.6rem}.featured-stats{gap:.8rem}.cs-stats-grid{grid-template-columns:1fr}.awards-grid{grid-template-columns:1fr 1fr}}
 .skip-link{position:absolute;top:-100px;left:0;background:var(--terra,#c4663a);color:#fff;padding:.8rem 1.5rem;z-index:100000;font-size:.84rem;font-weight:700;text-decoration:none;transition:top .2s}.skip-link:focus{top:0}
 .page-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.15;z-index:0}
+.mobile-overlay{display:none;position:fixed;inset:0;top:74px;background:rgba(12,27,42,.6);z-index:98;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}.mobile-overlay.show{display:block}
 </style>
 <script>if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);</script>
 <meta property="og:type" content="website">
@@ -269,6 +270,7 @@ body{opacity:0;animation:pageIn .4s ease forwards .05s}@keyframes pageIn{to{opac
 </div></nav>
 
 <!-- MOBILE MENU -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-menu" id="mobileMenu">
 <a href="services">Services</a>
 <a href="projects">Projects</a>
@@ -550,7 +552,7 @@ var name=card.querySelector('.project-name');
 lbImg.src=img.src;
 lbCap.textContent=name?name.textContent:'';
 lb.classList.add('open');
-document.body.style.overflow='hidden';
+document.body.style.overflow='hidden';ov.classList.add('show');
 });
 });
 lb.addEventListener('click',function(e){if(e.target!==lbImg){lb.classList.remove('open');document.body.style.overflow=''}});
