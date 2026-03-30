@@ -23,7 +23,7 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:var(--font-body);color:var(--charcoal);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;background:#e8e4de}
 
 /* TOPBAR */
 .topbar{background:var(--navy);color:rgba(255,255,255,.7);font-size:.75rem;padding:.55rem 0;letter-spacing:.03em}
@@ -411,8 +411,12 @@ body{opacity:0;animation:pageIn .4s ease forwards .05s}@keyframes pageIn{to{opac
 .wa-float{position:fixed;bottom:1rem;left:1rem;width:48px;height:48px;border-radius:50%;background:#25D366;display:none;align-items:center;justify-content:center;z-index:9998;box-shadow:0 4px 12px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s ease}.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:26px;height:26px;fill:#fff}@media(max-width:768px){.wa-float{display:flex}}
 .awards{padding:4rem 0;background:var(--cream-dark)}.awards-header{text-align:center;margin-bottom:2.5rem}.awards-header .section-title{margin:0 auto;max-width:500px}.awards-header .section-eyebrow{justify-content:center}.awards-header .section-eyebrow::before{display:none}.awards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}.award-card{background:var(--white);border:1px solid rgba(0,0,0,.04);border-radius:10px;padding:1.5rem;text-align:center;transition:all .3s ease}.award-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(12,27,42,.06)}.award-year{font-family:var(--font-mono);font-size:.7rem;color:var(--terra);font-weight:500;letter-spacing:.05em;margin-bottom:.4rem}.award-name{font-family:var(--font-display);font-size:.92rem;color:var(--navy);font-weight:600;line-height:1.3;margin-bottom:.3rem}.award-org{font-size:.72rem;color:var(--slate-light)}@media(max-width:768px){.awards-grid{grid-template-columns:repeat(2,1fr)}}
 .clients-bar{padding:3rem 0;background:var(--warm-white);border-bottom:1px solid rgba(0,0,0,.04)}.clients-label{text-align:center;font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:var(--slate-light);font-weight:600;margin-bottom:1.5rem}.clients-logos{display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;opacity:.4}.client-logo{font-family:var(--font-display);font-size:1.1rem;color:var(--navy);font-weight:700;letter-spacing:-.02em;white-space:nowrap;transition:opacity .3s}.client-logo:hover{opacity:1}.client-logo span{font-weight:400;color:var(--slate)}@media(max-width:768px){.clients-logos{gap:2rem}.client-logo{font-size:.95rem}}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#0c1b2a;color:rgba(255,255,255,.8);padding:1rem 2rem;display:none;align-items:center;justify-content:space-between;gap:1rem;z-index:10001;font-size:.82rem;line-height:1.5;flex-wrap:wrap}.cookie-banner.show{display:flex}.cookie-banner a{color:#d4784e;text-decoration:underline}.cookie-btn{background:#c4663a;color:#fff;border:none;padding:.6rem 1.4rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .2s}.cookie-btn:hover{background:#a8522c}@media(max-width:768px){.cookie-banner{flex-direction:column;text-align:center;padding:1.2rem 1.5rem}}
 </style>
 <script>if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ConstructionBusiness","name":"Cornerstone Build Co.","description":"Premium construction and development across the Netherlands. Residential, commercial, heritage renovation.","foundingDate":"2003","url":"https://devweydeyanon.github.io/cornerstone/","address":{"@type":"PostalAddress","streetAddress":"Herengracht 182","addressLocality":"Amsterdam","postalCode":"1016 BR","addressCountry":"NL"},"telephone":"+31201234567","email":"info@cornerstonebuild.nl","numberOfEmployees":{"@type":"QuantitativeValue","value":120},"areaServed":"Netherlands","priceRange":"€€€"}
+</script>
 </head>
 <body>
 
@@ -918,6 +922,17 @@ if(window.scrollY>300){btn.classList.add('show')}
 else{btn.classList.remove('show')}
 });
 btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+document.querySelectorAll('a[href]').forEach(function(a){
+var h=a.getAttribute('href');
+if(h&&h.endsWith('.html')&&!a.getAttribute('target')){
+a.addEventListener('click',function(e){
+e.preventDefault();
+document.body.style.opacity='0';
+document.body.style.transition='opacity .2s ease';
+setTimeout(function(){window.location.href=h},200);
+})}});
 </script>
+<div class="cookie-banner" id="cookieBanner"><span>We use cookies to improve your experience. By continuing to browse, you agree to our <a href="#">privacy policy</a>.</span><button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookies_accepted','1')">Accept</button></div>
 </body>
 </html>

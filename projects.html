@@ -24,7 +24,7 @@
 html{scroll-behavior:smooth;font-size:16px}
 body{font-family:var(--font-body);color:var(--charcoal);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;background:#e8e4de}
 
 /* TOPBAR */
 .topbar{background:var(--navy);color:rgba(255,255,255,.7);font-size:.75rem;padding:.55rem 0;letter-spacing:.03em}
@@ -235,6 +235,7 @@ footer{background:#091520;color:rgba(255,255,255,.5);padding:4rem 0 2rem}
 .lightbox{position:fixed;inset:0;background:rgba(12,27,42,.92);z-index:10000;display:none;align-items:center;justify-content:center;cursor:zoom-out;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);opacity:0;transition:opacity .3s ease}.lightbox.open{display:flex;opacity:1}.lightbox img{max-width:90%;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.4);transform:scale(.95);transition:transform .3s ease}.lightbox.open img{transform:scale(1)}.lightbox-close{position:absolute;top:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}.lightbox-close:hover{background:rgba(255,255,255,.2)}.lightbox-close svg{width:20px;height:20px;color:#fff}.lightbox-caption{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:.82rem;font-weight:500;text-align:center}
 body{opacity:0;animation:pageIn .4s ease forwards .05s}@keyframes pageIn{to{opacity:1}}
 .wa-float{position:fixed;bottom:1rem;left:1rem;width:48px;height:48px;border-radius:50%;background:#25D366;display:none;align-items:center;justify-content:center;z-index:9998;box-shadow:0 4px 12px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s ease}.wa-float:hover{transform:scale(1.08)}.wa-float svg{width:26px;height:26px;fill:#fff}@media(max-width:768px){.wa-float{display:flex}}
+.cookie-banner{position:fixed;bottom:0;left:0;right:0;background:#0c1b2a;color:rgba(255,255,255,.8);padding:1rem 2rem;display:none;align-items:center;justify-content:space-between;gap:1rem;z-index:10001;font-size:.82rem;line-height:1.5;flex-wrap:wrap}.cookie-banner.show{display:flex}.cookie-banner a{color:#d4784e;text-decoration:underline}.cookie-btn{background:#c4663a;color:#fff;border:none;padding:.6rem 1.4rem;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;cursor:pointer;font-family:inherit;white-space:nowrap;transition:background .2s}.cookie-btn:hover{background:#a8522c}@media(max-width:768px){.cookie-banner{flex-direction:column;text-align:center;padding:1.2rem 1.5rem}}
 </style>
 <script>if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);</script>
 </head>
@@ -576,6 +577,17 @@ if(window.scrollY>300){btn.classList.add('show')}
 else{btn.classList.remove('show')}
 });
 btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+document.querySelectorAll('a[href]').forEach(function(a){
+var h=a.getAttribute('href');
+if(h&&h.endsWith('.html')&&!a.getAttribute('target')){
+a.addEventListener('click',function(e){
+e.preventDefault();
+document.body.style.opacity='0';
+document.body.style.transition='opacity .2s ease';
+setTimeout(function(){window.location.href=h},200);
+})}});
 </script>
+<div class="cookie-banner" id="cookieBanner"><span>We use cookies to improve your experience. By continuing to browse, you agree to our <a href="#">privacy policy</a>.</span><button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookies_accepted','1')">Accept</button></div>
 </body>
 </html>
