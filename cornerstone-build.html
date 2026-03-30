@@ -777,7 +777,7 @@ const revealObs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger-children').forEach(el=>revealObs.observe(el));
 
 // Stats section observer — triggers counter + bar animations
-const statsObs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');animateCountersIn(el.target);statsObs.disconnect()}})},{threshold:.3});
+const statsObs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');animateCountersIn(el.target);statsObs.disconnect()}})},{threshold:.05});
 const statsEl=document.querySelector('.stats');
 if(statsEl)statsObs.observe(statsEl);
 
@@ -799,10 +799,17 @@ if(p<1)requestAnimationFrame(u);
 });
 }
 
-// Hero stats counter
-const heroStatsObs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){animateCountersIn(el.target);heroStatsObs.disconnect()}})},{threshold:.3});
+// Hero stats counter - fire immediately if visible, else use observer
 const heroStats=document.querySelector('.hero-stats');
-if(heroStats)heroStatsObs.observe(heroStats);
+if(heroStats){
+const rect=heroStats.getBoundingClientRect();
+if(rect.top<window.innerHeight&&rect.bottom>0){
+animateCountersIn(heroStats);
+}else{
+const heroStatsObs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){animateCountersIn(el.target);heroStatsObs.disconnect()}})},{threshold:.1});
+heroStatsObs.observe(heroStats);
+}
+}
 
 // Nav scroll shadow
 let lastScroll=0;
