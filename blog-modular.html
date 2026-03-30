@@ -62,16 +62,6 @@ if(window.scrollY>300){btn.classList.add('show')}
 else{btn.classList.remove('show')}
 });
 btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
-
-document.querySelectorAll('a[href]').forEach(function(a){
-var h=a.getAttribute('href');
-if(h&&h.endsWith('.html')&&!a.getAttribute('target')){
-a.addEventListener('click',function(e){
-e.preventDefault();
-document.body.style.opacity='0';
-document.body.style.transition='opacity .2s ease';
-setTimeout(function(){window.location.href=h},200);
-})}});
 </script>
 <div class="cookie-banner" id="cookieBanner"><span>We use cookies to improve your experience. By continuing to browse, you agree to our <a href="#">privacy policy</a>.</span><button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookies_accepted','1')">Accept</button></div>
 </body></html>

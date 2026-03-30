@@ -130,7 +130,7 @@ footer{background:#091520;color:rgba(255,255,255,.5);padding:4rem 0 2rem}
 .footer-socials svg{width:15px;height:15px}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
+.reveal{opacity:1;transform:translateY(0);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
 @media(max-width:1024px){
@@ -296,16 +296,6 @@ if(window.scrollY>300){btn.classList.add('show')}
 else{btn.classList.remove('show')}
 });
 btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
-
-document.querySelectorAll('a[href]').forEach(function(a){
-var h=a.getAttribute('href');
-if(h&&h.endsWith('.html')&&!a.getAttribute('target')){
-a.addEventListener('click',function(e){
-e.preventDefault();
-document.body.style.opacity='0';
-document.body.style.transition='opacity .2s ease';
-setTimeout(function(){window.location.href=h},200);
-})}});
 </script>
 <div class="cookie-banner" id="cookieBanner"><span>We use cookies to improve your experience. By continuing to browse, you agree to our <a href="#">privacy policy</a>.</span><button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookies_accepted','1')">Accept</button></div>
 </body>

@@ -52,16 +52,6 @@ else{btn.classList.remove('show')}
 btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
 window.addEventListener('scroll',function(){var n=document.querySelector('nav');if(window.scrollY>60)n.classList.add('scrolled');else n.classList.remove('scrolled')});
 var mt=document.querySelector('.mobile-toggle'),mm=document.getElementById('mobileMenu');if(mt&&mm){mt.addEventListener('click',function(){mm.classList.toggle('open');var s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='none';s[1].style.opacity='1';s[2].style.transform='none'}});mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');var s=mt.querySelectorAll('span');s[0].style.transform='none';s[1].style.opacity='1';s[2].style.transform='none'})})}
-
-document.querySelectorAll('a[href]').forEach(function(a){
-var h=a.getAttribute('href');
-if(h&&h.endsWith('.html')&&!a.getAttribute('target')){
-a.addEventListener('click',function(e){
-e.preventDefault();
-document.body.style.opacity='0';
-document.body.style.transition='opacity .2s ease';
-setTimeout(function(){window.location.href=h},200);
-})}});
 </script>
 <div class="cookie-banner" id="cookieBanner"><span>We use cookies to improve your experience. By continuing to browse, you agree to our <a href="#">privacy policy</a>.</span><button class="cookie-btn" onclick="document.getElementById('cookieBanner').style.display='none';localStorage.setItem('cookies_accepted','1')">Accept</button></div>
 </body></html>
