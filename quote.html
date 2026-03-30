@@ -78,6 +78,7 @@ footer{background:#091520;color:rgba(255,255,255,.5);padding:4rem 0 2rem}.footer
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}.reveal.visible{opacity:1;transform:translateY(0)}.stagger-children.visible>*{opacity:1;transform:translateY(0)}.stagger-children>*{opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}.stagger-children.visible>*:nth-child(1){transition-delay:.05s}.stagger-children.visible>*:nth-child(2){transition-delay:.12s}.stagger-children.visible>*:nth-child(3){transition-delay:.19s}.stagger-children.visible>*:nth-child(4){transition-delay:.26s}.stagger-children.visible>*:nth-child(5){transition-delay:.33s}
 @media(max-width:1024px){.quote-grid{grid-template-columns:1fr;gap:3rem}.contact-info{position:static}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.topbar{display:none}.nav-links{display:none}.nav-phone{display:none}.nav-cta{display:none}.mobile-toggle{display:flex}.mobile-menu{display:flex}.qf-row{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:2rem}}
+.btt{position:fixed;bottom:2rem;right:2rem;width:46px;height:46px;border-radius:50%;background:var(--terra);color:var(--white);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:all .3s var(--ease-out);z-index:90;box-shadow:0 4px 16px rgba(196,102,58,.3)}.btt:hover{background:var(--terra-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,102,58,.4)}.btt.show{opacity:1;transform:translateY(0)}.btt svg{width:20px;height:20px}
 </style>
 <script>if("scrollRestoration" in history)history.scrollRestoration="manual";window.scrollTo(0,0);</script>
 </head>
@@ -154,6 +155,9 @@ window.addEventListener('scroll',()=>{const n=document.querySelector('nav');if(w
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')})});
 // Mobile menu
 const mt=document.querySelector('.mobile-toggle'),mm=document.getElementById('mobileMenu');if(mt&&mm){mt.addEventListener('click',()=>{mm.classList.toggle('open');const s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='none';s[1].style.opacity='1';s[2].style.transform='none'}});mm.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{mm.classList.remove('open');const s=mt.querySelectorAll('span');s[0].style.transform='none';s[1].style.opacity='1';s[2].style.transform='none'})})}
+
+const btt=document.getElementById('btt');if(btt){window.addEventListener('scroll',()=>{if(window.scrollY>500)btt.classList.add('show');else btt.classList.remove('show')},{passive:true});btt.addEventListener('click',()=>{window.scrollTo({top:0,behavior:'smooth'})})}
 </script>
+<button class="btt" id="btt" aria-label="Back to top"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
 </body>
 </html>
