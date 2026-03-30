@@ -155,7 +155,7 @@ footer{background:#091520;color:rgba(255,255,255,.5);padding:4rem 0 2rem}
 }
 </style>
 </head>
-<body>
+<body><script>if(window.location.hash==="")window.scrollTo(0,0);</script>
 
 <div class="topbar"><div class="topbar-inner">
 <div class="topbar-left">
@@ -280,7 +280,7 @@ footer{background:#091520;color:rgba(255,255,255,.5);padding:4rem 0 2rem}
 </div>
 </div></footer>
 
-<script>window.scrollTo(0,0);
+<script>
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 window.addEventListener('scroll',()=>{const n=document.querySelector('nav');if(window.scrollY>60)n.classList.add('scrolled');else n.classList.remove('scrolled')},{passive:true});

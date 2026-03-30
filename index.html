@@ -422,7 +422,7 @@ nav.scrolled{box-shadow:0 4px 30px rgba(12,27,42,.08)}
 }
 </style>
 </head>
-<body>
+<body><script>if(window.location.hash==="")window.scrollTo(0,0);</script>
 
 <div class="topbar"><div class="topbar-inner">
 <div class="topbar-left">
@@ -820,7 +820,7 @@ nav.scrolled{box-shadow:0 4px 30px rgba(12,27,42,.08)}
 </div>
 </div></footer>
 
-<script>window.scrollTo(0,0);
+<script>
 // Universal reveal observer (handles .reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children)
 const revealObs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');if(!el.target.classList.contains('stagger-children'))revealObs.unobserve(el.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger-children').forEach(el=>revealObs.observe(el));
