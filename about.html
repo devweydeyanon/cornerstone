@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Cornerstone Build Co.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0c1b2a;--navy-mid:#132d46;--navy-light:#1a3a5c;--terra:#c4663a;--terra-light:#d4784e;--terra-dark:#a8522c;--cream:#faf7f2;--cream-dark:#f0ebe3;--warm-white:#fefcf9;--slate:#5a6872;--slate-light:#8a949c;--charcoal:#1e2328;--white:#fff;--font-display:'Playfair Display',Georgia,serif;--font-body:'Manrope',-apple-system,sans-serif;--font-mono:'JetBrains Mono',monospace;--font-accent:'DM Serif Display',Georgia,serif;--max-w:1280px;--ease-out:cubic-bezier(.16,1,.3,1)}
+html{scroll-behavior:smooth;font-size:16px}body{font-family:var(--font-body);color:var(--charcoal);background:var(--cream);overflow-x:hidden;-webkit-font-smoothing:antialiased}.container{max-width:var(--max-w);margin:0 auto;padding:0 2rem}img{display:block;max-width:100%}
+.topbar{background:var(--navy);color:rgba(255,255,255,.7);font-size:.75rem;padding:.55rem 0}.topbar-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}.topbar-left{display:flex;gap:1.8rem;align-items:center}.topbar-item{display:flex;align-items:center;gap:.4rem}.topbar-item svg{width:13px;height:13px;opacity:.6}.topbar-right{display:flex;gap:1.5rem;align-items:center}.topbar-right a{color:rgba(255,255,255,.7);text-decoration:none;transition:color .3s}.topbar-right a:hover{color:var(--terra-light)}
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,0,0,.05);transition:box-shadow .4s;-webkit-transform:translateZ(0);transform:translateZ(0)}nav.scrolled{box-shadow:0 4px 30px rgba(12,27,42,.08)}.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:74px}.nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--navy)}.nav-logo-mark{width:40px;height:40px;display:flex;align-items:center;justify-content:center}.nav-logo-mark svg{width:40px;height:40px}.nav-logo-text{font-family:var(--font-display);font-size:1.25rem;font-weight:700;letter-spacing:-.02em;line-height:1.1}.nav-logo-sub{font-family:var(--font-body);font-size:.6rem;text-transform:uppercase;letter-spacing:.18em;color:var(--slate);font-weight:600;display:block;margin-top:1px}.nav-links{display:flex;align-items:center;gap:2.2rem;list-style:none}.nav-links a{text-decoration:none;color:var(--navy);font-size:.84rem;font-weight:600;position:relative;transition:color .3s}.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--terra);transition:width .3s var(--ease-out)}.nav-links a:hover{color:var(--terra)}.nav-links a:hover::after{width:100%}.nav-links a.active{color:var(--terra)}.nav-links a.active::after{width:100%}.nav-right{display:flex;align-items:center;gap:1.2rem}.nav-phone{display:flex;align-items:center;gap:.4rem;font-size:.84rem;font-weight:700;color:var(--navy);text-decoration:none}.nav-phone svg{width:15px;height:15px;color:var(--terra)}.nav-cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--terra);color:var(--white);padding:.7rem 1.6rem;font-size:.8rem;font-weight:700;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;border-radius:8px;transition:all .3s var(--ease-out);font-family:var(--font-body)}.nav-cta:hover{background:var(--terra-dark)}.mobile-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}.mobile-toggle span{width:24px;height:2px;background:var(--navy);transition:all .3s var(--ease-out)}.mobile-menu{display:none;position:fixed;top:74px;left:0;right:0;background:var(--white);z-index:99;padding:1.5rem 2rem 2rem;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 12px 40px rgba(12,27,42,.1);transform:translateY(-110%);transition:transform .4s var(--ease-out);flex-direction:column;gap:.3rem}.mobile-menu.open{transform:translateY(0)}.mobile-menu a{display:block;padding:.8rem 0;font-size:.95rem;font-weight:600;color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(0,0,0,.05)}.mobile-menu a:hover{color:var(--terra)}.mobile-menu .mobile-cta{display:block;margin-top:1rem;background:var(--terra);color:var(--white);padding:1rem;text-align:center;font-size:.84rem;font-weight:700;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;border-radius:8px}.mobile-menu .mobile-phone{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.6rem;padding:.8rem;font-size:.84rem;font-weight:700;color:var(--navy);text-decoration:none;border:1.5px solid rgba(0,0,0,.1);border-radius:8px}.mobile-menu .mobile-phone svg{width:15px;height:15px;color:var(--terra)}
+.section-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--terra);margin-bottom:.8rem}.section-eyebrow::before{content:'';width:24px;height:2px;background:var(--terra)}.section-title{font-family:var(--font-display);font-size:clamp(1.9rem,3.2vw,2.6rem);line-height:1.18;letter-spacing:-.02em;color:var(--navy);max-width:500px}.btn-primary{display:inline-flex;align-items:center;gap:.6rem;background:var(--terra);color:var(--white);padding:1rem 2rem;font-size:.84rem;font-weight:700;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;border:none;border-radius:8px;cursor:pointer;transition:all .3s var(--ease-out);font-family:var(--font-body)}.btn-primary:hover{background:var(--terra-dark);transform:translateY(-2px);box-shadow:0 8px 30px rgba(196,102,58,.3)}.btn-primary svg{width:16px;height:16px}
+
+/* PAGE HERO */
+.page-hero{background:var(--navy);padding:5rem 0 4rem;position:relative;overflow:hidden}.page-hero::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4663a' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}.page-hero-inner{position:relative;z-index:2}.page-hero .section-eyebrow{color:var(--terra-light)}.page-hero .section-eyebrow::before{background:var(--terra-light)}.page-hero-title{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.2rem);color:var(--white);line-height:1.12;letter-spacing:-.02em;margin-bottom:1rem;animation:fadeUp .7s var(--ease-out) both}.page-hero-title em{font-style:italic;color:var(--terra-light)}.page-hero-sub{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:560px;animation:fadeUp .7s .1s var(--ease-out) both}.page-hero-breadcrumb{display:flex;align-items:center;gap:.5rem;margin-bottom:1.5rem;font-size:.76rem;color:rgba(255,255,255,.4)}.page-hero-breadcrumb a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .3s}.page-hero-breadcrumb a:hover{color:var(--terra-light)}.page-hero-breadcrumb svg{width:12px;height:12px;opacity:.5}
+
+/* STORY */
+.story{padding:5rem 0;background:var(--warm-white)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.story-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 12px 40px rgba(12,27,42,.08)}
+.story-title{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2rem);color:var(--navy);line-height:1.2;margin-bottom:1.2rem}
+.story-text{font-size:.92rem;color:var(--slate);line-height:1.85;margin-bottom:1rem}
+.story-sig{display:flex;align-items:center;gap:1rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(0,0,0,.06)}
+.story-sig-init{width:48px;height:48px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;color:var(--terra-light);font-family:var(--font-display);font-size:1rem;font-weight:700;flex-shrink:0}
+.story-sig-name{font-weight:700;font-size:.86rem;color:var(--navy)}
+.story-sig-role{font-size:.74rem;color:var(--slate)}
+
+/* MISSION/VISION */
+.mv{padding:5rem 0;background:var(--cream)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.mv-card{background:var(--white);border:1px solid rgba(0,0,0,.04);border-radius:10px;padding:2.5rem;position:relative;overflow:hidden;transition:all .4s var(--ease-out)}
+.mv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--terra)}
+.mv-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(12,27,42,.06)}
+.mv-icon{width:48px;height:48px;border-radius:50%;background:rgba(196,102,58,.06);border:1.5px solid rgba(196,102,58,.12);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem}
+.mv-icon svg{width:22px;height:22px;color:var(--terra)}
+.mv-label{font-family:var(--font-display);font-size:1.2rem;color:var(--navy);font-weight:600;margin-bottom:.6rem}
+.mv-text{font-size:.88rem;color:var(--slate);line-height:1.8}
+
+/* TIMELINE */
+.timeline{padding:5rem 0;background:var(--warm-white)}
+.timeline-header{text-align:center;margin-bottom:3.5rem}
+.timeline-header .section-title{margin:0 auto}.timeline-header .section-eyebrow{justify-content:center}.timeline-header .section-eyebrow::before{display:none}
+.tl-grid{position:relative;max-width:700px;margin:0 auto}
+.tl-grid::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:2px;background:linear-gradient(to bottom,var(--terra),rgba(196,102,58,.15));transform:translateX(-50%)}
+.tl-item{display:flex;align-items:flex-start;gap:2rem;margin-bottom:2.5rem;position:relative}
+.tl-item:nth-child(even){flex-direction:row-reverse;text-align:right}
+.tl-year{flex-shrink:0;width:80px;font-family:var(--font-mono);font-size:.82rem;font-weight:700;color:var(--terra);padding-top:.3rem}
+.tl-dot{width:14px;height:14px;border-radius:50%;background:var(--terra);border:3px solid var(--warm-white);position:absolute;left:50%;transform:translateX(-50%);top:.3rem;z-index:2;box-shadow:0 0 0 3px rgba(196,102,58,.15)}
+.tl-content{flex:1;background:var(--white);border:1px solid rgba(0,0,0,.04);border-radius:8px;padding:1.2rem 1.5rem}
+.tl-title{font-family:var(--font-display);font-size:1rem;color:var(--navy);font-weight:600;margin-bottom:.3rem}
+.tl-desc{font-size:.82rem;color:var(--slate);line-height:1.6}
+
+/* CERTIFICATIONS */
+.certs{padding:5rem 0;background:var(--navy);position:relative;overflow:hidden}
+.certs::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4663a' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.certs-inner{position:relative;z-index:2;max-width:var(--max-w);margin:0 auto;padding:0 2rem;text-align:center}
+.certs-header{margin-bottom:3rem}
+.certs-header .section-eyebrow{color:var(--terra-light);justify-content:center}.certs-header .section-eyebrow::before{display:none}
+.certs-header .section-title{color:var(--white);margin:0 auto}
+.cert-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.cert-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:2rem 1rem;transition:all .3s var(--ease-out)}
+.cert-card:hover{background:rgba(255,255,255,.08);border-color:rgba(196,102,58,.2)}
+.cert-icon{width:48px;height:48px;border-radius:50%;background:rgba(196,102,58,.1);display:flex;align-items:center;justify-content:center;margin:0 auto .8rem}
+.cert-icon svg{width:22px;height:22px;color:var(--terra-light)}
+.cert-name{font-size:.82rem;color:var(--white);font-weight:700;margin-bottom:.2rem}
+.cert-desc{font-size:.7rem;color:rgba(255,255,255,.4);line-height:1.4}
+
+/* OFFICES */
+.offices{padding:5rem 0;background:var(--cream)}
+.offices-header{margin-bottom:2rem}
+.off-single{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--white);border:1px solid rgba(0,0,0,.04);border-radius:10px;overflow:hidden}
+.off-single-img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.off-single-body{padding:2.5rem}
+.off-single-label{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--terra);font-weight:700;margin-bottom:.3rem}
+.off-single-city{font-family:var(--font-display);font-size:1.5rem;color:var(--navy);font-weight:600;margin-bottom:1.2rem}
+.off-single-items{display:flex;flex-direction:column;gap:1rem}
+.off-single-item{display:flex;align-items:flex-start;gap:.8rem;font-size:.88rem;color:var(--slate);line-height:1.5}
+.off-single-item svg{width:18px;height:18px;color:var(--terra);flex-shrink:0;margin-top:2px}
+
+/* CTA */
+.page-cta{padding:0;background:var(--navy)}.page-cta-grid{display:grid;grid-template-columns:1fr 1fr;min-height:380px}.page-cta-image{position:relative;overflow:hidden}.page-cta-image img{width:100%;height:100%;object-fit:cover}.page-cta-image::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--navy) 0%,rgba(12,27,42,.3) 100%)}.page-cta-content{display:flex;flex-direction:column;justify-content:center;padding:4rem 4rem 4rem 3rem;position:relative;z-index:2}.page-cta-title{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--white);line-height:1.2;margin-bottom:1rem}.page-cta-title em{font-style:italic;color:var(--terra-light)}.page-cta-sub{font-size:.92rem;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:2rem;max-width:420px}.page-cta-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-cta-light{display:inline-flex;align-items:center;gap:.6rem;background:var(--terra);color:var(--white);padding:1rem 2rem;font-size:.84rem;font-weight:700;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;border-radius:8px;transition:all .3s var(--ease-out);font-family:var(--font-body)}.btn-cta-light:hover{background:var(--terra-dark);transform:translateY(-2px)}.btn-cta-light svg{width:16px;height:16px}
+
+footer{background:#091520;color:rgba(255,255,255,.5);padding:4rem 0 2rem}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}.footer-brand-desc{font-size:.84rem;line-height:1.7;margin-top:1rem;max-width:280px;font-weight:300}.footer-col-title{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--white);font-weight:700;margin-bottom:1.1rem}.footer-col a{display:block;color:rgba(255,255,255,.45);text-decoration:none;font-size:.84rem;padding:.3rem 0;transition:color .3s}.footer-col a:hover{color:var(--terra-light)}.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.76rem}.footer-socials{display:flex;gap:.8rem}.footer-socials a{width:36px;height:36px;border:1px solid rgba(255,255,255,.1);border-radius:4px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);text-decoration:none;transition:all .3s}.footer-socials a:hover{border-color:var(--terra);color:var(--terra-light)}.footer-socials svg{width:15px;height:15px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}.reveal.visible{opacity:1;transform:translateY(0)}.reveal-left{opacity:0;transform:translateX(-40px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}.reveal-left.visible{opacity:1;transform:translateX(0)}.reveal-right{opacity:0;transform:translateX(40px);transition:opacity .7s var(--ease-out),transform .7s var(--ease-out)}.reveal-right.visible{opacity:1;transform:translateX(0)}.stagger-children.visible>*{opacity:1;transform:translateY(0)}.stagger-children>*{opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease-out),transform .5s var(--ease-out)}.stagger-children.visible>*:nth-child(1){transition-delay:.05s}.stagger-children.visible>*:nth-child(2){transition-delay:.12s}.stagger-children.visible>*:nth-child(3){transition-delay:.19s}.stagger-children.visible>*:nth-child(4){transition-delay:.26s}.stagger-children.visible>*:nth-child(5){transition-delay:.33s}
+@media(max-width:1024px){.story-grid{grid-template-columns:1fr;gap:2.5rem}.mv-grid{grid-template-columns:1fr}.cert-grid{grid-template-columns:repeat(3,1fr)}.off-single{grid-template-columns:1fr}.page-cta-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.topbar{display:none}.nav-links{display:none}.nav-phone{display:none}.nav-cta{display:none}.mobile-toggle{display:flex}.mobile-menu{display:flex}.tl-grid::before{left:20px}.tl-item,.tl-item:nth-child(even){flex-direction:row;text-align:left}.tl-dot{left:20px}.tl-year{width:auto;min-width:50px}.cert-grid{grid-template-columns:repeat(2,1fr)}.off-single{grid-template-columns:1fr}.page-cta-image{min-height:250px}.page-cta-content{padding:3rem 2rem}.footer-grid{grid-template-columns:1fr;gap:2rem}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-inner"><div class="topbar-left"><div class="topbar-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Herengracht 182, 1016 BR Amsterdam</div><div class="topbar-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Mon–Fri: 08:00 – 17:30</div></div><div class="topbar-right"><a href="mailto:info@cornerstonebuild.nl">info@cornerstonebuild.nl</a><a href="tel:+31201234567">+31 (0)20 123 45 67</a></div></div></div>
+<nav><div class="nav-inner"><a href="index.html" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 48 48" width="40" height="40" fill="none"><rect x="4" y="28" width="18" height="18" rx="2" fill="#0c1b2a"/><rect x="26" y="28" width="18" height="18" rx="2" fill="#0c1b2a"/><rect x="15" y="8" width="18" height="18" rx="2" fill="#c4663a"/></svg></div><div><span class="nav-logo-text">Cornerstone</span><span class="nav-logo-sub">Build Co.</span></div></a><ul class="nav-links"><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="team.html">Our Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="about.html" class="active">About Us</a></li></ul><div class="nav-right"><a href="tel:+31201234567" class="nav-phone"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> +31 20 123 45 67</a><a href="quote.html" class="nav-cta">Get a Quote</a></div><button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
+<div class="mobile-menu" id="mobileMenu"><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="team.html">Our Team</a><a href="blog.html">Blog</a><a href="about.html">About Us</a><a href="quote.html" class="mobile-cta">Get a Quote</a><a href="tel:+31201234567" class="mobile-phone"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> +31 20 123 45 67</a></div>
+
+<section class="page-hero"><div class="container page-hero-inner">
+<div class="page-hero-breadcrumb"><a href="index.html">Home</a><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><span>About Us</span></div>
+<div class="section-eyebrow">Our Story</div>
+<h1 class="page-hero-title">Building trust since <em>2003.</em></h1>
+<p class="page-hero-sub">What started as a two-person residential builder in Amsterdam has grown into a 120-person construction firm delivering projects across the Netherlands.</p>
+</div></section>
+
+<section class="story"><div class="container">
+<div class="story-grid">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&h=525&fit=crop&q=80" alt="Construction team" class="story-img reveal-left">
+<div class="reveal-right">
+<div class="section-eyebrow">The Beginning</div>
+<h2 class="story-title">From a garage in the Jordaan to 340+ projects</h2>
+<p class="story-text">In 2003, Willem van der Berg and a single carpenter started renovating apartments in Amsterdam's Jordaan neighbourhood. The work was small but the standard was high — and word spread. Within three years, Cornerstone had a team of twelve and its first commercial contract.</p>
+<p class="story-text">Two decades later, we operate from three offices, employ 120+ professionals, and have delivered over 340 projects across residential, commercial, heritage, and sustainable construction. The scale has changed, but the principle hasn't: every project gets our full attention and our highest standard.</p>
+<div class="story-sig"><div class="story-sig-init">TB</div><div><div class="story-sig-name">Willem van der Berg</div><div class="story-sig-role">CEO & Founder</div></div></div>
+</div>
+</div>
+</div></section>
+
+<section class="mv"><div class="container">
+<div class="mv-grid reveal stagger-children">
+<div class="mv-card">
+<div class="mv-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg></div>
+<div class="mv-label">Our Vision</div>
+<div class="mv-text">To be the Netherlands' most trusted construction partner — known for delivering structures that stand the test of time, on every project, for every client.</div>
+</div>
+<div class="mv-card">
+<div class="mv-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+<div class="mv-label">Our Mission</div>
+<div class="mv-text">To combine traditional craftsmanship with modern engineering precision, delivering construction that exceeds expectations through transparent communication, fixed pricing, and uncompromising quality.</div>
+</div>
+</div>
+</div></section>
+
+<section class="timeline"><div class="container">
+<div class="timeline-header reveal"><div class="section-eyebrow">Milestones</div><div class="section-title">22 years of growth and excellence</div></div>
+<div class="tl-grid reveal">
+<div class="tl-item"><div class="tl-year">2003</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Founded in Amsterdam</div><div class="tl-desc">Willem van der Berg starts Cornerstone with one carpenter in the Jordaan.</div></div></div>
+<div class="tl-item"><div class="tl-year">2006</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">First Commercial Contract</div><div class="tl-desc">Team grows to 12. First office fit-out project in Amsterdam Zuid.</div></div></div>
+<div class="tl-item"><div class="tl-year">2010</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">ISO 9001 Certified</div><div class="tl-desc">Quality management system formalised. Team reaches 35 professionals.</div></div></div>
+<div class="tl-item"><div class="tl-year">2014</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Rotterdam Office Opens</div><div class="tl-desc">Second office established. Heritage renovation division launched.</div></div></div>
+<div class="tl-item"><div class="tl-year">2018</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">100th Project Delivered</div><div class="tl-desc">First BREEAM Excellent certified building. Sustainability team formed.</div></div></div>
+<div class="tl-item"><div class="tl-year">2021</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">Utrecht Office Opens</div><div class="tl-desc">Third location. Team exceeds 100 professionals for the first time.</div></div></div>
+<div class="tl-item"><div class="tl-year">2025</div><div class="tl-dot"></div><div class="tl-content"><div class="tl-title">340+ Projects Complete</div><div class="tl-desc">120+ team members. 4.9 client rating. Shortlisted for Dutch Construction Award.</div></div></div>
+</div>
+</div></section>
+
+<section class="certs"><div class="certs-inner">
+<div class="certs-header reveal"><div class="section-eyebrow">Certifications</div><div class="section-title">Standards we hold ourselves to</div></div>
+<div class="cert-grid reveal stagger-children">
+<div class="cert-card"><div class="cert-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="cert-name">Bouwgarant</div><div class="cert-desc">Insured build guarantee</div></div>
+<div class="cert-card"><div class="cert-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div><div class="cert-name">ISO 9001</div><div class="cert-desc">Quality management</div></div>
+<div class="cert-card"><div class="cert-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div><div class="cert-name">VCA**</div><div class="cert-desc">Safety certified</div></div>
+<div class="cert-card"><div class="cert-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="cert-name">BREEAM</div><div class="cert-desc">Sustainability assessor</div></div>
+<div class="cert-card"><div class="cert-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="cert-name">€10M Insured</div><div class="cert-desc">Full liability coverage</div></div>
+</div>
+</div></section>
+
+<section class="offices"><div class="container">
+<div class="offices-header reveal"><div class="section-eyebrow">Our Office</div><div class="section-title">Visit us in Amsterdam</div></div>
+<div class="off-single reveal">
+<img src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=700&h=500&fit=crop&q=80" alt="Amsterdam" class="off-single-img">
+<div class="off-single-body">
+<div class="off-single-label">Headquarters</div>
+<div class="off-single-city">Amsterdam</div>
+<div class="off-single-items">
+<div class="off-single-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Herengracht 182, 1016 BR Amsterdam</div>
+<div class="off-single-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg> +31 (0)20 123 45 67</div>
+<div class="off-single-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> info@cornerstonebuild.nl</div>
+<div class="off-single-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Mon–Fri: 08:00 – 17:30</div>
+</div>
+</div>
+</div>
+</div></section>
+
+<section class="page-cta"><div class="page-cta-grid">
+<div class="page-cta-image"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&h=500&fit=crop&q=80" alt="Construction"></div>
+<div class="page-cta-content reveal">
+<div class="section-eyebrow" style="color:var(--terra-light)">Work With Us</div>
+<h2 class="page-cta-title">Ready to start your <em>project?</em></h2>
+<p class="page-cta-sub">Get a detailed, no-obligation quote within 5 business days. We'd love to hear about your plans.</p>
+<div class="page-cta-buttons"><a href="quote.html" class="btn-cta-light">Request a Quote <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
+</div>
+</div></section>
+
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo" style="margin-bottom:.5rem"><div class="nav-logo-mark"><svg viewBox="0 0 48 48" width="40" height="40" fill="none"><rect x="4" y="28" width="18" height="18" rx="2" fill="white"/><rect x="26" y="28" width="18" height="18" rx="2" fill="white"/><rect x="15" y="8" width="18" height="18" rx="2" fill="#c4663a"/></svg></div><div><span class="nav-logo-text" style="color:white">Cornerstone</span><span class="nav-logo-sub">Build Co.</span></div></a><p class="footer-brand-desc">Premium construction across the Netherlands. Bouwgarant certified, ISO 9001.</p></div><div class="footer-col"><div class="footer-col-title">Services</div><a href="services.html">Residential</a><a href="services.html">Commercial</a><a href="services.html">Heritage</a><a href="services.html">Renovation</a><a href="services.html">Project Management</a></div><div class="footer-col"><div class="footer-col-title">Company</div><a href="about.html">About Us</a><a href="projects.html">Projects</a><a href="team.html">Our Team</a><a href="blog.html">Blog</a><a href="quote.html">Contact</a></div><div class="footer-col"><div class="footer-col-title">Contact</div><a href="mailto:info@cornerstonebuild.nl" style="color:var(--terra-light)">info@cornerstonebuild.nl</a><a href="tel:+31201234567" style="color:var(--terra-light)">+31 (0)20 123 45 67</a><a href="about.html">Amsterdam (HQ)</a><a href="about.html">Rotterdam</a><a href="about.html">Utrecht</a></div></div><div class="footer-bottom"><span>&copy; 2026 Cornerstone Build Co. B.V. All rights reserved. KvK: 12345678</span><div class="footer-socials"><a href="#"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a><a href="#"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.064 2.064 0 110-4.128 2.064 2.064 0 010 4.128zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a></div></div></div></footer>
+<script>const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger-children').forEach(el=>obs.observe(el));window.addEventListener('scroll',()=>{const n=document.querySelector('nav');if(window.scrollY>60)n.classList.add('scrolled');else n.classList.remove('scrolled')},{passive:true});const mt=document.querySelector('.mobile-toggle'),mm=document.getElementById('mobileMenu');if(mt&&mm){mt.addEventListener('click',()=>{mm.classList.toggle('open');const s=mt.querySelectorAll('span');if(mm.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='none';s[1].style.opacity='1';s[2].style.transform='none'}});mm.querySelectorAll('a').forEach(a=>{a.addEventListener('click',()=>{mm.classList.remove('open');const s=mt.querySelectorAll('span');s[0].style.transform='none';s[1].style.opacity='1';s[2].style.transform='none'})})}</script>
+</body>
+</html>
